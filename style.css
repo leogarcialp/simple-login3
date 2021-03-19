@@ -1,0 +1,156 @@
+:root {
+   --blue1: #0077eb;
+   --blue2: #dcecf9;
+   --pollo: #fecc51;
+   --dark: #212121;
+   --grisfade: rgba(136, 136, 136, 0.349);
+}
+
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+html {
+   font-size: 62.5%;
+}
+
+body {
+   background-image: url(./img/background1.jpg);
+   background-repeat: no-repeat;
+   font-size: 16px;
+   font-family: 'Roboto', sans-serif;
+}
+
+img {
+   width: 100%;
+}
+
+/* Estilos Desktop*/
+/* ============== */
+/* Contenedor */
+.container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+}
+
+
+/* Separar en 2 el card */
+.card {
+   display: flex;
+   width: 80rem;
+}
+
+.card-split {
+   width: 50%;
+}
+
+.left-side {
+   background-color: white;
+}
+
+.right-side {
+   background-color: var(--blue2);
+   padding: 5rem;
+   display: flex; /*no idea but flex works :D */
+}                 /*to center img*/
+
+
+/* Card Header - left side */
+.card-header {
+   text-align: center;
+   margin-bottom: 2rem;
+}
+
+.header-logo {
+   display: flex;   
+   justify-content: center;
+   align-items: center;
+   padding-top: 2rem;
+   margin-bottom: 2rem;
+   font-size: 2rem;
+   font-weight: 300;
+}
+
+.card-header span {
+   font-weight: 400;
+}
+
+.card-header h2 {
+   text-transform: uppercase;
+}
+
+.header-logo img {
+   width: 5rem;
+}
+
+
+
+/* Body Card - Form */
+.card-body {
+   display: flex;
+   flex-direction: column;
+   text-align: left;
+   padding: 2rem 5rem 3rem;
+   border-top: 1px solid var(--grisfade);
+}
+
+.card-body label {
+   margin-bottom: .5rem;
+}
+
+.card-body input {
+   margin-bottom: 1.6rem;
+   height: 3rem;
+   border: 1px solid var(--grisfade);
+}
+
+.card-body .check {
+   height: 0;
+}
+
+.card-body input:focus {
+   border: 1px solid var(--blue1);
+}
+
+.btn-login {
+   border: none;
+   cursor: pointer;
+   background-color: var(--pollo);
+   font-weight: 700;
+}
+
+.btn-login:hover {
+   background-color: #f7b100;
+}
+
+
+/* ================= */
+/* Media Queries */
+
+/* Tablet */
+/* 768px - 1024px */
+@media (max-width:768px) {
+   .card {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+   }
+}
+
+
+
+/* Mobile */
+/* 375px - 768px */
+@media (max-width:768px) {
+   .left-side {
+      width: 350px;
+   }
+
+   .right-side {
+      display: none;
+   }
+}
